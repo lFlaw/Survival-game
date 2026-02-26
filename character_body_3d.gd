@@ -48,7 +48,7 @@ func _physics_process(delta):
 			velocity.z = move_toward(velocity.z, 0, speed)
 	else:
 		velocity.x = lerp(velocity.x, direction.x * speed, delta * 3.0)
-		velocity.z = lerp(velocity.x, direction.x * speed, delta * 3.0)
+		velocity.z = lerp(velocity.z, direction.x * speed, delta * 3.0)
 	#head bob stuff
 	t_bob += delta * velocity.length() * float(is_on_floor())
 	camera.transform.origin = _headbob(t_bob)
